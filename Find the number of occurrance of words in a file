@@ -1,0 +1,21 @@
+# Find the number of occurrance of words in a file 
+from collections import Counter
+
+filepath='D:\Beema\Python\cover letter for python developer.txt'
+with open (filepath,'r') as file :
+    s=file.readlines()
+       
+        
+gg=[]
+for i in s:
+    
+    for j in i.split(" "):
+        if j not in gg:
+            gg.append({j:i.count(j)})
+            #print(j,len(j))
+
+print(gg)
+
+max_frequency_dict = max(gg, key=lambda x: list(x.values())[0])
+
+print(f'The dictionary with the maximum frequency is: {max_frequency_dict}')
