@@ -1,0 +1,22 @@
+# Finds the indices of two numbers in the input list that add up to the target sum.
+  
+def sum(nums,target):
+    output={}
+    for i in range(len(nums)):
+        
+        
+        for j in range(i+1,len(nums)):
+            if nums[i]+nums[j]==target:
+                 key=(i,j)
+                 if key not in output:
+                     output[key]=(nums[i],nums[j])
+                 #print(nums[i],nums[j])
+                 #print(i,j)
+
+    return output  
+
+target = 9
+nums = [2, 15, 7, 7]
+a=sum(nums,target)
+print(a)
+# Output {(0, 2): (2, 7), (0, 3): (2, 7)} 
