@@ -1,0 +1,8 @@
+# Split and join as a single variable
+a="2,34,56"
+a.split(",")
+str(a).replace(",",'')
+
+b=[4,5,6,7]
+str(b).split(",")
+print(''.join(str(b).replace(",",'').split(' ')))
