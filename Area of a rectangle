@@ -1,0 +1,8 @@
+# Area of a rectangle
+def area(l,b):
+  c=l*b
+  return c
+#l,b = map(int,input().split(' '))
+k,l=int(input()),int(input())
+d=area(k,l)
+print(d)
