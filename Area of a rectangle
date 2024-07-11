@@ -6,3 +6,5 @@ def area(l,b):
 k,l=int(input()),int(input())
 d=area(k,l)
 print(d)
+
+# 
