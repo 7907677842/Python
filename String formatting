@@ -3,5 +3,5 @@ name = input()
 
 #Take the age input as a Integer.
 age = int(input())
-
+print(f"The name of the person is {name} and the age is {age}")
 print("The name of the person is"," ",name," ","and the age is"," ",age,'.',sep = "")
