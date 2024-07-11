@@ -1,0 +1,7 @@
+#Take the name input as a String.
+name = input()
+
+#Take the age input as a Integer.
+age = int(input())
+
+print("The name of the person is"," ",name," ","and the age is"," ",age,'.',sep = "")
