@@ -1,0 +1,17 @@
+
+# Palindrome of a string
+def palindrome(text):
+  text=text.casefold()
+  text=''.join(i for i in text if i.isalnum())
+  left=0
+  right=len(text)-1
+  while left<right:
+    if text[left]==text[right]:
+      left+=1
+      right-=1
+    else:
+      return False
+  return True
+
+text=input()
+print(palindrome(text))
