@@ -1,0 +1,15 @@
+
+# Given a year, return the century it is in
+def solution(year):
+    f=year//100
+    if year%100==0:
+        f=f  
+    if year%400==0:
+        f=f  
+    if year%100!=0:
+        f=f+1 
+    return f
+
+
+    
+print(solution(1905))
