@@ -1,0 +1,24 @@
+# Palindrome
+def solution(inputString):
+  rev=0
+  while(inputString>0):
+    c = inputString % 10
+    rev = rev * 10 + c
+    inputString = inputString // 10
+  #if rev==inputString:
+  return rev
+ 
+
+
+inputString = int(input("Enter a number: "))
+rev=solution(545)
+
+if rev == inputString:
+  print(f"{inputString} is a palindrome.")
+else:
+  print(f"{inputString} is not a palindrome.")
+
+# Print the reversed number (optional)
+print(f"The reversed number is: {rev}")  # Optional for debugging or further use
+
+
