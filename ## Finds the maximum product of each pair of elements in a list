@@ -1,0 +1,16 @@
+## Finds the maximum product of each pair of elements in a list
+inputArray = [3, 6, -2, -5, 7, 3]
+
+#dd={}
+maxproduct=0
+for i in range(len(inputArray)):
+  for j in range(i+1,len(inputArray)):
+    d=inputArray[i]*inputArray[j]
+    key=i,j
+    dd[key]=d
+    if maxproduct<d:
+      maxproduct=d
+      pairs=inputArray[i],inputArray[j]
+print(maxproduct,pairs)
+    
+print((dd))
