@@ -1,0 +1,18 @@
+def reverseArray(arr, m):
+    arr = list(arr)  # Convert the set to a list
+    brr = []  # Initialize an empty list
+    
+    # Copy the first part of the array up to index m
+    for i in range(m + 1):
+        brr.append(arr[i])
+    
+    # Copy the last part of the array in reverse order
+    for j in range(len(arr) - 1, m, -1):
+        brr.append(arr[j])
+    
+    return brr
+
+# Example usage
+arr = {1, 2, 3, 4, 5, 6}  # Input as a set
+m = 2  # Index after which to reverse the subarray
+print(reverseArray(arr, m))  # Expected output: [1, 2, 3, 6, 5, 4]
