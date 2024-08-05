@@ -1,0 +1,17 @@
+# We have an array ARR = {1, 2, 3, 4, 5, 6} and M = 3 , considering 0 
+based indexing so the subarray {5, 6} will be reversed and our 
+output array will be {1, 2, 3, 4, 6, 5}.
+#########################################
+
+def reverseArray(arr, m):
+    start=m+1  
+    end=len(arr)-1
+    while(start<end):
+        arr[start],arr[end]=arr[end],arr[start]
+        start+=1  
+        end-=1  
+    return arr
+
+arr=[1, 2, 3, 4, 5, 6]
+m=3
+print(reverseArray(arr, m))
