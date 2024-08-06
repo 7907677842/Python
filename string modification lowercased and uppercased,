@@ -1,0 +1,21 @@
+# 
+text='StRing ObJeCts haVe mANy inTEResting pROPerTies'
+word_list = text.lower().split(' ')
+for i in range(1,len(word_list),2):
+    word_list[i]=word_list[i].upper()
+print(word_list)
+
+              or
+              
+              
+text='StRing ObJeCts haVe mANy inTEResting pROPerTies'
+word_list = text.split()
+
+# Make every other word lowercased; otherwise - uppercased
+for i in range(len(word_list)):
+    if (i+1)%2== 0:
+        word_list[i] = word_list[i].upper()
+    else:
+        word_list[i] =word_list[i].lower()
+        
+print(word_list)
