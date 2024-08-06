@@ -19,3 +19,5 @@ for i in range(len(word_list)):
         word_list[i] =word_list[i].lower()
         
 print(word_list)
+new_text =' '.join(word_list)
+print(new_text)
