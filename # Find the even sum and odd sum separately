@@ -1,0 +1,13 @@
+# # Find the even sum and odd sum separately
+
+a=int(input())
+
+even=0
+odd=0
+for i in str(a):
+    i=int(i)
+    if i%2==0:
+        even+=i
+    else:
+        odd+=i
+print(even,odd,sep='\t')
