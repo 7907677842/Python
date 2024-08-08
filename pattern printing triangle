@@ -1,0 +1,12 @@
+# print stars as triangle
+def ninjaAndTriangle(n):
+    height=0
+    star=0
+    while(star+height+1)<=n:
+        height+=1
+        star+=height
+
+    for i in range(1,height+1):
+        print(' '*(n-i)+'* '*i)
+n=6
+ninjaAndTriangle(n)
