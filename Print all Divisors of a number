@@ -1,0 +1,19 @@
+# Print all Divisors of a number
+
+from typing import List
+
+def printDivisors(n: int) -> List[int]:
+    divisors = []
+    
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            divisors.append(i)
+            if i != n // i:  # To avoid adding the square root twice if it's a perfect square
+                divisors.append(n // i)
+    
+    divisors.sort()
+    return divisors
+
+# Example usage:
+n = 6
+print(printDivisors(n))
