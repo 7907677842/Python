@@ -1,0 +1,26 @@
+## Insertion of an element in an array - 
+
+def insertElement(arr,pos,element):
+    size=len(arr)
+    if (pos<=size and pos>=0):
+        arr.append(0)
+        for i in range(size,pos,-1):
+            arr[i]=arr[i-1]
+        arr[pos]=element
+        for i in range(size+1):
+            print(arr[i],end=" ")
+    else:
+        print("invalid")
+        
+arr = [1, 20, 5, 78, 30]  # Initial array
+size = len(arr)  # Size of the array
+
+# Input position and element to be inserted
+pos = int(input("Enter position: "))
+element = int(input("Enter element: "))
+
+insertElement(arr, pos, element)
+
+
+
+            
