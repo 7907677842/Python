@@ -1,0 +1,13 @@
+# Find average marks
+def averageMarks(firstLetterOfName, m1, m2, m3):
+
+    # Write your code here
+    # Return a pair<char, int> denoting the answer
+    
+    average=(m1+m2+m3)//3
+    
+    return (firstLetterOfName,average)
+firstLetterOfName=input()
+m1, m2, m3=int(input()),int(input()),int(input())
+result=averageMarks(firstLetterOfName, m1, m2, m3)
+print(result[0], result[1])
