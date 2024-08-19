@@ -1,0 +1,9 @@
+#You are given an array ‘arr’ containing ‘n’ integers. You are also given an integer ‘num’, and your task is to find whether ‘num’ is present in the array or not.
+def linearSearch(n: int, num: int, arr: [int]) -> int:
+    # Iterate through the array
+    for i in range(n):
+        # Check if the current element is the one we're looking for
+        if arr[i] == num:
+            print(i)  # This prints the index to the console
+            return i  # This returns the index to the calling code
+    return -1  # Return -1 if 'num' is not found in the array
