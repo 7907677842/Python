@@ -1,0 +1,12 @@
+# Find sum of elements
+
+def sum_of_elements(arr):
+    # Use the built-in sum function to calculate the sum of all elements
+    return sum(arr)
+
+# Example usage:
+N = int(input())  # Reading the size of the array
+arr = list(map(int, input().split()))  # Reading the array elements
+
+# Output the sum of the array elements
+print(sum_of_elements(arr))
