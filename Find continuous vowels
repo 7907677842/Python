@@ -1,0 +1,28 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def find_vowel_substrings(s, min_vowels=2):
+    vowels = "AEIOUaeiou"
+    consonants = "QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm"
+    n = len(s)
+    found = False
+
+    i = 0
+    while i < n:
+        if s[i] in consonants:
+            j = i + 1
+            while j < n and s[j] in vowels:
+                j += 1
+            if j < n and j > i + 1 and s[j] in consonants:
+                substring = s[i+1:j]
+                if len(substring) >= min_vowels:
+                    found = True
+                    print(f"{substring}")
+            i = j
+        else:
+            i += 1
+    
+    if not found:
+        print("-1")
+
+input_string="rabcdeefgyYhFjkIoomnpOeorteeeeet"
+
+find_vowel_substrings(input_string)
