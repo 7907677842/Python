@@ -1,0 +1,31 @@
+#Find majority element
+def find_majority_element(arr):
+    n = len(arr)
+    candidate = None
+    count = 0
+
+    # Step 1: Find the candidate
+    for num in arr:
+        if count == 0:
+            candidate = num
+            count = 1
+        elif num == candidate:
+            count += 1
+        else:
+            count -= 1
+
+    # Step 2: Verify the candidate
+    count = 0
+    for num in arr:
+        if num == candidate:
+            count += 1
+
+    if count > n // 2:
+        return candidate
+    else:
+        return -1
+
+# Example usage:
+arr = [2, 2, 1, 1, 2, 2, 2]
+result = find_majority_element(arr)
+print(result)  # Output: 2
