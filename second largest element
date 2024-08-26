@@ -1,0 +1,32 @@
+#Find second largest number from an array
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    largest = float('-inf')
+    second_largest = float('-inf')
+
+    for num in arr:
+        if num > largest:
+            second_largest = largest
+            largest = num
+        elif num > second_largest and num != largest:
+            second_largest = num
+
+    print(second_largest)
+OR----------------------
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    # Convert the list to a set to remove duplicates
+    unique_arr = list(set(arr))
+    
+    # Sort the list in ascending order
+    unique_arr.sort()
+    
+    # Print the second last element in the sorted list, which is the second largest
+    if len(unique_arr) > 1:
+        print(unique_arr[-2])
+    else:
+        print("No second largest number found")
