@@ -1,0 +1,16 @@
+# Find highest number and its count
+
+def birthdayCakeCandles(candles):
+    # Write your code here
+    tallest=candles[0]
+    count=0
+    
+    for i in range(len(candles)):
+        
+        if candles[i]>tallest:
+            tallest=candles[i]
+        if candles[i]==tallest:
+                count+=1
+    return count
+
+
