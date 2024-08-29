@@ -1,0 +1,33 @@
+# Find the difference between diagonals of a string
+
+def diagonalDifference(arr):
+    # Calculate the sum of the primary diagonal
+    primary_diagonal_sum = sum(arr[i][i] for i in range(len(arr)))
+    
+    # Calculate the sum of the secondary diagonal
+    secondary_diagonal_sum = sum(arr[i][len(arr) - 1 - i] for i in range(len(arr)))
+    
+    # Calculate the absolute difference between the two diagonals
+    difference = abs(primary_diagonal_sum - secondary_diagonal_sum)
+    
+    return difference
+    
+    
+    
+    #####################orrrr################
+    def diagonalDifference(arr):
+    primary_diagonal_sum = 0
+    secondary_diagonal_sum = 0
+    n = len(arr)
+    
+    for i in range(n):
+        primary_diagonal_sum += arr[i][i]              # Summing elements of the primary diagonal
+        secondary_diagonal_sum += arr[i][n - 1 - i]    # Summing elements of the secondary diagonal
+    
+    difference = abs(primary_diagonal_sum - secondary_diagonal_sum)
+    
+    return difference
+    
+    
+    
+    
