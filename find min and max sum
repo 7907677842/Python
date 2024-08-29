@@ -1,0 +1,16 @@
+# find min and max sum 
+def miniMaxSum(arr):
+    # Write your code here
+    sum1=sum(arr)
+    m=[]
+    
+    for i in range(len(arr)):
+        sums=sum1-arr[i]
+        m.append(sums)
+      
+        
+  
+    print(min(m),max(m))
+    
+arr =[1,2,3,4,5]      
+miniMaxSum(arr)
