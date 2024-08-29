@@ -9,6 +9,7 @@ def birthdayCakeCandles(candles):
         
         if candles[i]>tallest:
             tallest=candles[i]
+    for i in range(len(candles)):
         if candles[i]==tallest:
                 count+=1
     return count
