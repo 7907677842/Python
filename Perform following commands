@@ -1,0 +1,37 @@
+# Perform following commands
+if __name__ == '__main__':
+    n = int(input())  # Read the number of commands
+    lst = []  # Initialize an empty list
+
+    for _ in range(n):
+        # Read the command as a string, and split it into parts
+        command = input().split()
+
+        # First part of the command is always the action to perform
+        action = command[0]
+
+        # Check which command it is and perform the appropriate list operation
+        if action == "insert":
+            # Insert command has two arguments: index and element
+            index = int(command[1])
+            element = int(command[2])
+            lst.insert(index, element)
+        elif action == "print":
+            print(lst)
+        elif action == "remove":
+            # Remove the first occurrence of the element
+            element = int(command[1])
+            lst.remove(element)
+        elif action == "append":
+            # Append an element at the end of the list
+            element = int(command[1])
+            lst.append(element)
+        elif action == "sort":
+            # Sort the list
+            lst.sort()
+        elif action == "pop":
+            # Pop the last element from the list
+            lst.pop()
+        elif action == "reverse":
+            # Reverse the list
+            lst.reverse()
