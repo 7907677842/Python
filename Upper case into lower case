@@ -1,0 +1,17 @@
+# Upper case into lower case
+def swap_case(s):
+    b=[]
+    for char in s:
+        if char.isupper(): 
+            v=char.lower()
+            b.append(v)
+        else:
+            v=char.upper()
+            b.append(v)
+    b=''.join(b)
+    return b
+
+# Example usage:
+s = "Hello World!"
+bb = swap_case(s)
+print(bb) 
